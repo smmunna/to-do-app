@@ -1,5 +1,5 @@
-let count =0;
-document.getElementById('add').addEventListener('click',function(){
+let count = 0;
+document.getElementById('add').addEventListener('click', function () {
     const inputField = document.getElementById('input').value;
     count++;
     //rows-element
@@ -13,15 +13,15 @@ document.getElementById('add').addEventListener('click',function(){
     <button id="delete">Delete</button>
     </td>
     `;
-     rowsElement.appendChild(tr);
+    rowsElement.appendChild(tr);
 
     //  For deleteing:;
 
     const deleteBtn = document.querySelectorAll('#delete');
-    for(const value of deleteBtn){
-        value.addEventListener('click',function(event){
-           const myitem = event.target.parentNode.parentNode;
-           myitem.innerHTML = '';
+    for (const value of deleteBtn) {
+        value.addEventListener('click', function (event) {
+            const myitem = event.target.parentNode.parentNode;
+            myitem.innerHTML = '';
         })
     }
 })

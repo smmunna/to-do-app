@@ -10,16 +10,16 @@ document.getElementById('add').addEventListener('click',function(){
     <td>${count}</td>
     <td>${inputField}</td>
     <td>
-    <button class="delete">Delete</button>
+    <button id="delete">Delete</button>
     </td>
     `;
      rowsElement.appendChild(tr);
 
     //  For deleteing:;
 
-    const deleteBtn = document.querySelectorAll(".delete");
+    const deleteBtn = document.querySelectorAll('#delete');
     for(const value of deleteBtn){
-        value.addEventListener("click",function(event){
+        value.addEventListener('click',function(event){
            const myitem = event.target.parentNode.parentNode;
            myitem.innerHTML = '';
         })

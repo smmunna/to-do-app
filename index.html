@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,18 +11,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                black: '#171717',
-                blue:'#0369a1',
-                red:'#991b1b',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#171717',
+                        blue: '#0369a1',
+                        red: '#991b1b',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
+
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <header>
         <h1 class="text-4xl text-center border-b-2 p-2">Fruits List</h1>
@@ -30,8 +34,10 @@
     <main>
         <!-- For taking input from the User -->
         <section>
-            <div class="input mt-2 text-center">
-                <input type="text" class=" outline-none p-2 border-2 w-1/2 rounded-2xl" placeholder="Add your favorite food"> <button class="text-white font-semibold  bg-blue p-2 border-2 w-1/4 rounded-2xl ">Add</button>
+            <div class=" mt-2 text-center">
+                <input type="text" id="input" class=" outline-none p-2 border-2 w-1/2 rounded-2xl"
+                    placeholder="Add your favorite food"> <button id="add"
+                    class="text-white font-semibold  bg-blue p-2 border-2 w-1/4 rounded-2xl ">Add</button>
             </div>
         </section>
         <!-- For showing the output -->
@@ -39,23 +45,16 @@
             <h1 class="text-2xl text-center m-4 lg:m-10 text-blue font-bold">Output For this todo App</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div>
-                   <img class="w-full p-3" src="images/fruits.jpg" alt="fruits-munna"> 
+                    <img class="w-full p-3" src="images/fruits.jpg" alt="fruits-munna">
                 </div>
                 <div class=" p-3 text-center">
-                    <table>
+                    <table id="rows-element">
                         <tr>
                             <th>No.</th>
                             <th>Fruits List</th>
                             <th>Action</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Apple</td>
-                            <td>
-                                <button>Delete</button>
-                                <button>Add</button>
-                            </td>
-                        </tr>
+                        <!-- Elements will appear here Dynamically -->
                     </table>
                 </div>
             </div>
@@ -65,5 +64,8 @@
     <footer>
 
     </footer>
+    <!-- CUSTOM JS -->
+    <script src="js/todo.js"></script>
 </body>
+
 </html>

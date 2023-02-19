@@ -1,0 +1,13 @@
+#delete{
+    outline: none;
+    border: hidden;
+    padding: 5px;
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+}
+#delete:focus{
+    border: 2px solid red;
+    outline: none;
+}
